@@ -1,0 +1,183 @@
+//------------------- box-sizing for all element
+* {
+	box-sizing: inherit;
+	// max-height to all
+	max-height: 1000000px;
+
+	&:after,
+	&:before {
+		box-sizing: inherit;
+	}
+}
+
+//------------------- transition none when resize
+.resize-active {
+	transition: none !important;
+
+	*,
+	*:before,
+	*:after {
+		transition: inherit !important;
+	}
+}
+
+//------------------- container
+.container {
+	width: 100%;
+	margin: 0 auto;
+	padding-left: var(--gutter);
+	padding-right: var(--gutter);
+
+	@each $name,
+	$value in $container {
+		@if ($name=='default') {
+			max-width: calc(#{$value} + var(--gutter) * 2);
+		}
+
+		@else {
+			&._#{$name} {
+				max-width: calc(#{$value} + var(--gutter) * 2);
+			}
+		}
+	}
+}
+
+//------------------- footer to bottom
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background: $gray;
+}
+
+// fix bug on some flex block (see example with slider swiper)
+.main,
+.header,
+.footer {
+	min-width: 0;
+}
+
+.list-therapists {
+	display: none;
+}
+
+.btns {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	button,
+	a {
+		text-transform: uppercase;
+		color: $white;
+		margin: 5px 10px;
+		min-width: 140px;
+		transition: all var(--animation-duration);
+		position: relative;
+		font-size: 14px;
+
+		&#prevBtn {
+			background: $default;
+			border: 1px solid $default;
+			padding: 10px 20px;
+
+			&:hover {
+				color: $default;
+				background: $white;
+
+				.arrowed {
+					.arrow-back {
+						border: 1px solid $default;
+						border-width: 1px 1px 0 0;
+
+						&:after {
+							border: 1px solid $default;
+							border-width: 1px 1px 0 0;
+						}
+					}
+				}
+			}
+		}
+
+		&#nextBtn {
+			background: $light-blue;
+			border: 1px solid $light-blue;
+			padding: 10px 20px;
+
+			&:hover {
+				color: $light-blue;
+				background: $white;
+			}
+		}
+
+		.arrowed {
+			position: absolute;
+			height: 7px;
+			width: 7px;
+			top: 50%;
+			left: 38px;
+			transform: translateY(-50%);
+
+			.arrow-back {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				height: 7px;
+				width: 7px;
+				border: 1px solid $white;
+				border-width: 1px 1px 0 0;
+				transform: rotate(225deg);
+				transition: border var(--animation-duration);
+
+				&:after {
+					content: '';
+					display: block;
+					height: 7px;
+					width: 7px;
+					border: 1px solid $white;
+					border-width: 1px 1px 0 0;
+					transform: translate(5px, -6px);
+					transition: border var(--animation-duration);
+				}
+			}
+		}
+	}
+
+	#submit {
+		background: $light-blue;
+		border: 1px solid $light-blue;
+		padding: 10px 20px;
+		display: none;
+		text-transform: uppercase;
+		color: $white;
+		text-decoration: none;
+
+		&:hover {
+			color: $light-blue;
+			background: transparent;
+		}
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&-container {
+		padding: 50px 0;
+	}
+}

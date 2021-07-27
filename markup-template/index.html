@@ -1,0 +1,833 @@
+//= template/head.html
+<title>Survey Form Application</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="main">
+
+			<div class="container">
+				<div class="form-container">
+
+					<form id="surveyForm" action="#url" class="form">
+
+						<div class="tab">
+							<div class="heading">
+								<h3>What therapy or consultation are you looking for?</h3>
+							</div>
+							<div class="tab-group">
+								<input type="radio" value="radio" name="kind" id="individual">
+								<label for="individual">Individual</label>
+							</div>
+
+							<div class="tab-group">
+								<input type="radio" value="radio" name="kind" id="couple-therapy">
+								<label for="couple-therapy">Couple therapy</label>
+							</div>
+
+							<div class="tab-group">
+								<input type="radio" value="radio" name="kind" id="children">
+								<label for="children">For children</label>
+							</div>
+						</div>
+
+						<div class="tab">
+							<div class="heading">
+								<h3>What is your gender?</h3>
+							</div>
+							<div class="tab-group">
+								<input type="radio" value="radio" name="gender" id="female">
+								<label for="female">Female</label>
+							</div>
+
+							<div class="tab-group">
+								<input type="radio" value="radio" name="gender" id="male">
+								<label for="male">Male</label>
+							</div>
+
+							<div class="tab-group">
+								<input type="radio" value="radio" name="gender" id="other">
+								<label for="other">Other</label>
+							</div>
+						</div>
+
+						<div class="tab">
+							<div class="heading">
+								<h3>How old are you?</h3>
+							</div>
+							<div class="tab-group">
+								<input type="radio" value="radio" name="age" id="teen">
+								<label for="teen">16-17</label>
+							</div>
+
+							<div class="tab-group">
+								<input type="radio" value="radio" name="age" id="middle">
+								<label for="middle">18-59</label>
+							</div>
+
+							<div class="tab-group">
+								<input type="radio" value="radio" name="age" id="senior">
+								<label for="senior">60+</label>
+							</div>
+							<p>
+								If you are under 16 ask adult for a help
+							</p>
+						</div>
+
+						<div class="tab _checkbox _checkbox__issues">
+							<div class="heading">
+								<h3>What best describes what you are struggling with?</h3>
+								<p>Choose at least one option.</p>
+							</div>
+
+							<div class="grid _row">
+
+								<div class="col-12 col-md-6">
+									<div class="tab-group">
+										<input type="checkbox" name="crisis" id="crisis">
+										<label for="crisis">emotional crisis</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="family" id="family">
+										<label for="family">family problems</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="mood" id="mood">
+										<label for="mood">mood problems</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="anxiety" id="anxiety">
+										<label for="anxiety">anxiety difficulties</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="relationships" id="relationships">
+										<label for="relationships">difficulties in relationships</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="professional" id="professional">
+										<label for="professional">professional difficulties</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="addiction" id="addiction">
+										<label for="addiction">addiction</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="related-body" id="related-body">
+										<label for="related-body">related to the body</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="sex" id="sex">
+										<label for="sex">sex life</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="phobia" id="phobia">
+										<label for="phobia">phobia</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="social-phobia" id="social-phobia">
+										<label for="social-phobia">social phobia</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="mobbing" id="mobbing">
+										<label for="mobbing">mobbing</label>
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="tab-group">
+										<input type="checkbox" name="abortion" id="abortion">
+										<label for="abortion">abortion</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="aggression" id="aggression">
+										<label for="aggression">aggression</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="anorexia" id="anorexia">
+										<label for="anorexia">anorexia</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="panic" id="panic">
+										<label for="panic">panic attacks</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="self-aggression" id="self-aggression">
+										<label for="self-aggression">self-aggression</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="bulimia" id="bulimia">
+										<label for="bulimia">bulimia</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="disease" id="disease">
+										<label for="disease">affective disease</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="bipolar" id="bipolar">
+										<label for="bipolar">bipolar</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="depression" id="depression">
+										<label for="depression">depression</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="dysthymia" id="dysthymia">
+										<label for="dysthymia">dysthymia</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="violence" id="violence">
+										<label for="violence">violence</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="schizophrenia" id="schizophrenia">
+										<label for="schizophrenia">schizophrenia</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab _checkbox _checkbox__language">
+							<div class="heading">
+								<h3>Language of therapy</h3>
+								<p>Choose at least one language or more if you need multi-lingual therapist</p>
+							</div>
+
+							<div class="grid _row">
+
+								<div class="col-12 col-md-6">
+									<div class="tab-group">
+										<input type="checkbox" name="english" id="english">
+										<label for="english">English</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="polish" id="polish">
+										<label for="polish">Polish</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="romanian" id="romanian">
+										<label for="romanian">Romanian</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="spanish" id="spanish">
+										<label for="spanish">Spanish</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="italian" id="italian">
+										<label for="italian">Italian</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="russian" id="russian">
+										<label for="russian">Russian</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="german" id="german">
+										<label for="german">German</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="arabic" id="arabic">
+										<label for="arabic">Arabic</label>
+									</div>
+								</div>
+
+								<div class="col-12 col-md-6">
+									<div class="tab-group">
+										<input type="checkbox" name="ukrainian" id="ukrainian">
+										<label for="ukrainian">Ukrainian</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="portuguese" id="portuguese">
+										<label for="portuguese">Portuguese</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="slovakian" id="slovakian">
+										<label for="slovakian">Slovakian</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="czech" id="czech">
+										<label for="czech">Czech</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="chinese" id="chinese">
+										<label for="chinese">Chinese</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="hindi" id="hindi">
+										<label for="hindi">Hindi</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="french" id="french">
+										<label for="french">French</label>
+									</div>
+
+									<div class="tab-group">
+										<input type="checkbox" name="bengali" id="bengali">
+										<label for="bengali">Bengali</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="btns">
+							<button type="button" id="prevBtn">
+								<div class="arrowed">
+									<div class="arrow-back"></div>
+								</div>
+								Back
+							</button>
+							<button type="button" id="nextBtn">Next</button>
+							<a href="#!" id="submit">Show lists of therapists</a>
+						</div>
+
+					</form>
+
+					<div class="list-therapists">
+
+						<div class="heading">
+							<h2>
+								List of therapists
+							</h2>
+						</div>
+
+						<div class="nav-panel">
+							<div class="preferences">
+								<a class="btn" href="#!" id="openModal">Modify preferences</a>
+							</div>
+
+							<div class="sort">
+								<form action="#url">
+									<span>Sort by:</span>
+									<select name="filter" id="filter">
+										<option value="recommended">Recommended</option>
+										<option value="lowest">Lowest price</option>
+										<option value="highest">Highest price</option>
+									</select>
+								</form>
+							</div>
+						</div>
+
+						<div class="therapist-block">
+							<div class="therapist-block_top">
+								<div class="image">
+									<img src="img/img01.png" alt="image description">
+								</div>
+								<div class="info">
+									<div class="price">
+										<p>from <span>&#163</span> 52 <br>
+											per session</p>
+									</div>
+									<div class="name">
+										<h2><strong>dr. Alexandra Stevens-Schlotterbeck</strong> Psychologist, Counsellor</h2>
+									</div>
+								</div>
+							</div>
+							<div class="therapist-block_bottom">
+								<ul class="tags">
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+								</ul>
+								<div class="line"></div>
+								<ul class="communications">
+									<li>
+										<p>Video</p>
+										<div class="tick"></div>
+									</li>
+									<li>
+										<p>Phone</p>
+										<div class="tick"></div>
+									</li>
+									<li>
+										<p>Chat</p>
+										<div class="cross"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="therapist-block_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu hac est nisl
+									elementum maecenas nunc auctor hac habitant. Posuere risus, eget ultricies id
+									viverra nulla nisl tempus, at.
+								</p>
+							</div>
+							<a href="#!" class="btn _profile">View profile</a>
+						</div>
+
+						<div class="therapist-block">
+							<div class="therapist-block_top">
+								<div class="image">
+									<img src="img/img01.png" alt="image description">
+								</div>
+								<div class="info">
+									<div class="price">
+										<p>from <span>&#163</span> 20 <br>
+											per session</p>
+									</div>
+									<div class="name">
+										<h2><strong>dr. Monika Stevens</strong> Psychologist, Counsellor</h2>
+									</div>
+								</div>
+							</div>
+							<div class="therapist-block_bottom">
+								<ul class="tags">
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+								</ul>
+								<div class="line"></div>
+								<ul class="communications">
+									<li>
+										<p>Video</p>
+										<div class="tick"></div>
+									</li>
+									<li>
+										<p>Phone</p>
+										<div class="cross"></div>
+									</li>
+									<li>
+										<p>Chat</p>
+										<div class="tick"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="therapist-block_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu hac est nisl
+									elementum maecenas nunc auctor hac habitant. Posuere risus, eget ultricies id
+									viverra nulla nisl tempus, at.
+								</p>
+							</div>
+							<a href="#!" class="btn _profile">View profile</a>
+						</div>
+
+						<div class="therapist-block">
+							<div class="therapist-block_top">
+								<div class="image">
+									<img src="img/img01.png" alt="image description">
+								</div>
+								<div class="info">
+									<div class="price">
+										<p>from <span>&#163</span> 40 <br>
+											per session</p>
+									</div>
+									<div class="name">
+										<h2><strong>dr. Rachel Green</strong> Psychologist, Counsellor</h2>
+									</div>
+								</div>
+							</div>
+							<div class="therapist-block_bottom">
+								<ul class="tags">
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+								</ul>
+								<div class="line"></div>
+								<ul class="communications">
+									<li>
+										<p>Video</p>
+										<div class="cross"></div>
+									</li>
+									<li>
+										<p>Phone</p>
+										<div class="tick"></div>
+									</li>
+									<li>
+										<p>Chat</p>
+										<div class="cross"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="therapist-block_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu hac est nisl
+									elementum maecenas nunc auctor hac habitant. Posuere risus, eget ultricies id
+									viverra nulla nisl tempus, at.
+								</p>
+							</div>
+							<a href="#!" class="btn _profile">View profile</a>
+						</div>
+
+						<div class="therapist-block">
+							<div class="therapist-block_top">
+								<div class="image">
+									<img src="img/img01.png" alt="image description">
+								</div>
+								<div class="info">
+									<div class="price">
+										<p>from <span>&#163</span> 52 <br>
+											per session</p>
+									</div>
+									<div class="name">
+										<h2><strong>dr. Alexandra Stevens-Schlotterbeck</strong> Psychologist, Counsellor</h2>
+									</div>
+								</div>
+							</div>
+							<div class="therapist-block_bottom">
+								<ul class="tags">
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+								</ul>
+								<div class="line"></div>
+								<ul class="communications">
+									<li>
+										<p>Video</p>
+										<div class="tick"></div>
+									</li>
+									<li>
+										<p>Phone</p>
+										<div class="tick"></div>
+									</li>
+									<li>
+										<p>Chat</p>
+										<div class="cross"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="therapist-block_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu hac est nisl
+									elementum maecenas nunc auctor hac habitant. Posuere risus, eget ultricies id
+									viverra nulla nisl tempus, at.
+								</p>
+							</div>
+							<a href="#!" class="btn _profile">View profile</a>
+						</div>
+
+						<div class="therapist-block">
+							<div class="therapist-block_top">
+								<div class="image">
+									<img src="img/img01.png" alt="image description">
+								</div>
+								<div class="info">
+									<div class="price">
+										<p>from <span>&#163</span> 20 <br>
+											per session</p>
+									</div>
+									<div class="name">
+										<h2><strong>dr. Monika Stevens</strong> Psychologist, Counsellor</h2>
+									</div>
+								</div>
+							</div>
+							<div class="therapist-block_bottom">
+								<ul class="tags">
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+								</ul>
+								<div class="line"></div>
+								<ul class="communications">
+									<li>
+										<p>Video</p>
+										<div class="tick"></div>
+									</li>
+									<li>
+										<p>Phone</p>
+										<div class="cross"></div>
+									</li>
+									<li>
+										<p>Chat</p>
+										<div class="tick"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="therapist-block_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu hac est nisl
+									elementum maecenas nunc auctor hac habitant. Posuere risus, eget ultricies id
+									viverra nulla nisl tempus, at.
+								</p>
+							</div>
+							<a href="#!" class="btn _profile">View profile</a>
+						</div>
+
+						<div class="therapist-block">
+							<div class="therapist-block_top">
+								<div class="image">
+									<img src="img/img01.png" alt="image description">
+								</div>
+								<div class="info">
+									<div class="price">
+										<p>from <span>&#163</span> 40 <br>
+											per session</p>
+									</div>
+									<div class="name">
+										<h2><strong>dr. Rachel Green</strong> Psychologist, Counsellor</h2>
+									</div>
+								</div>
+							</div>
+							<div class="therapist-block_bottom">
+								<ul class="tags">
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Depression
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Borderline personality
+										</a>
+									</li>
+									<li>
+										<a href="#!">
+											Phycical Addiction
+										</a>
+									</li>
+								</ul>
+								<div class="line"></div>
+								<ul class="communications">
+									<li>
+										<p>Video</p>
+										<div class="cross"></div>
+									</li>
+									<li>
+										<p>Phone</p>
+										<div class="tick"></div>
+									</li>
+									<li>
+										<p>Chat</p>
+										<div class="cross"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="therapist-block_text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu hac est nisl
+									elementum maecenas nunc auctor hac habitant. Posuere risus, eget ultricies id
+									viverra nulla nisl tempus, at.
+								</p>
+							</div>
+							<a href="#!" class="btn _profile">View profile</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal">
+				<div class="modal-holder">
+					<a href="#" class="modal-close close-btn"></a>
+					<div class="modal-content">
+						<div class="modal-block">
+							<h3 class="modal-block_heading">Type of help:</h3>
+							<ul id="type-of-help"></ul>
+							<a href="#!" class="btn start-again">Start search again</a>
+						</div>
+
+						<div class="modal-block">
+							<h3 class="modal-block_heading">Gender:</h3>
+							<ul id="gender"></ul>
+							<a href="#!" class="btn">Change gender</a>
+						</div>
+
+						<div class="modal-block">
+							<h3 class="modal-block_heading">Age:</h3>
+							<ul id="age"></ul>
+							<a href="#!" class="btn">Change age</a>
+						</div>
+
+						<div class="modal-block">
+							<h3 class="modal-block_heading">Issues:</h3>
+							<ul id="issues"></ul>
+							<a href="#!" class="btn">Change issues</a>
+						</div>
+
+						<div class="modal-block">
+							<h3 class="modal-block_heading">Language of therapy:</h3>
+							<ul id="languages"></ul>
+							<a href="#!" class="btn">Change language</a>
+						</div>
+					</div>
+					<a href="#" class="btn modal-close back-to-list">Back to list of therapists</a>
+				</div>
+			</div>
+		</main>
+	</div>
+	//= template/includes.html
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	$columns: map-get($grid, 'column');
+	$gutter: var(--grid-gutter);
+
+	&._row {
+		margin-left: calc(#{$gutter} * -1);
+		margin-right: calc(#{$gutter} * -1);
+	}
+
+	&._no-gutter {
+
+		[class*="col"] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	// Col
+	[class*="col"] {
+		flex-basis: 0;
+		flex-grow: 1;
+		min-width: 0;
+		max-width: 100%;
+
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+
+
+	@for $i from 1 through $columns {
+		.col-#{$i} {
+			flex: 0 0 percentage($i / $columns);
+			max-width: percentage($i / $columns);
+		}
+	}
+
+	// breakpoint
+	$breakpoints: map-get($grid, 'breakpoints');
+
+	@each $name, $media in $breakpoints {
+		@include media('>=#{$media}') {
+			@for $i from 1 through $columns {
+				.col-#{$name}-#{$i} {
+					flex: 0 0 percentage($i / $columns);
+					max-width: percentage($i / $columns);
+				}
+			}
+		}
+	}
+}

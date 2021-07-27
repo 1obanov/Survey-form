@@ -1,0 +1,145 @@
+.modal {
+	display: none;
+	position: fixed;
+	background-color: rgba(68, 161, 243, .3);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	transition: all var(--animation-duration);
+
+	&-holder {
+		width: 95%;
+		height: 95%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 5rem;
+		overflow: auto;
+		background: white;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		border: 2px solid $blue;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-content {
+		max-width: 500px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	&-block {
+		position: relative;
+		margin-bottom: 30px;
+
+		@include media("<phone") {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		&_heading {
+			margin-bottom: 20px;
+		}
+
+		ul {
+			padding: 0;
+			margin-bottom: 10px;
+
+			li {
+				margin-bottom: 3px;
+			}
+
+			&.hidden {
+				li {
+					&:nth-child(n+4) {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.more {
+			opacity: 0.5;
+			text-decoration: none;
+			position: relative;
+
+			@include media("<phone") {
+				margin-bottom: 25px;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			min-width: 190px;
+
+			@include media("<phone") {
+				position: relative;
+				order: 4;
+			}
+		}
+	}
+
+	.close-btn {
+		position: relative;
+		width: 12px;
+		height: 12px;
+		background-color: $white;
+		margin-left: auto;
+		display: block;
+
+		&:before {
+			position: absolute;
+			left: 0;
+			content: '';
+			display: block;
+			width: 15px;
+			height: 2px;
+			background-color: $default;
+			transform: rotate(45deg);
+			top: 0;
+		}
+
+		&:after {
+			position: absolute;
+			left: 0;
+			content: '';
+			display: block;
+			width: 15px;
+			height: 2px;
+			background-color: $default;
+			transform: rotate(-45deg);
+			top: 0;
+		}
+	}
+
+	h1 {
+		font-size: 150%;
+		margin: 0 0 15px;
+	}
+
+	.back-to-list {
+		margin: 0 auto;
+		display: block;
+		max-width: max-content;
+		min-width: 550px;
+		text-transform: uppercase;
+		white-space: pre-wrap;
+		margin-top: auto;
+
+		@include media("<phone") {
+			min-width: 100%;
+		}
+	}
+}

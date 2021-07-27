@@ -1,0 +1,86 @@
+$breakpoints: (
+  "full": 1920px,
+  "xl": 1680px,
+  "macbook": 1440px,
+  "ipad-pro": 1366px,
+  "md-desktop": 1200px,
+  "desktop": 1024px,
+  "tablet": 768px,
+  "phone": 667px,
+  "md-phone": 568px,
+  "sm-phone": 480px,
+  "xs-phone": 375px
+);
+// ligatured operators ≥ ≤
+
+// keywords
+$media-expressions: (
+  "iphoneX":
+    "(min-width: 812px) and (max-height: 414px) and (orientation: landscape)",
+  "screen": "screen",
+  "print": "print",
+  "handheld": "handheld",
+  "landscape": "(orientation: landscape)",
+  "portrait": "(orientation: portrait)",
+  "retina2x": "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)",
+  "retina3x": "(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)"
+);
+
+// Colors theme
+$btn-bg-color: #58b0c4;
+$default: #3c586e;
+$gray: #f6f6f6;
+$white: #ffffff;
+$blue: #44a1f3;
+$light-blue: #58b0c4;
+$yellow: #f2b25e;
+$red: #ec4035;
+
+
+// font-family
+$base-main-font: 'Montserrat';
+$base-font-sans-serif: 'Montserrat', "Helvetica Neue", "Helvetica", sans-serif;
+$base-font-serif: "Times New Roman", "Times", "Baskerville", "Georgia", serif;
+$base-font: $base-main-font, $base-font-sans-serif;
+$accent-font: $base-font;
+
+// Headers
+// name use for media query `<${name}`. See `$breakpoints` variable for a possible key.
+$headings: (
+  // --------- h1 ---- h2 ----h3 ---- h4 -- h5 -- h6 ---
+  "default": (3.5rem, 2.8rem, 2.2rem, 2rem, 17px, 16px),
+  "tablet": (25px, 23px, 20px, 18px, 17px, 16px)
+);
+
+// Container
+$gutter: 20px;
+$container: (
+  "default": 1024px
+);
+
+// Grid
+$grid: (
+	'column': 12,
+	'gutter': 15px,
+	'breakpoints': (
+		'xs': 'sm-phone',
+		'sm': 'phone',
+		'md': 'tablet',
+		'lg': 'desktop',
+		'xl': 'md-desktop',
+		'xxl': 'full',
+	),
+);
+
+// Buttons size
+$btnsSize: (
+  "default": (
+    "default": (
+      "y": 10px,
+      "x": 20px,
+      "b": 1px,
+      "r": 3px,
+      "fz": 16px
+    )
+  )
+);

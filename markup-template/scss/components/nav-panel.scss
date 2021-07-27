@@ -1,0 +1,26 @@
+.nav-panel {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 25px;
+
+	@include media("<phone") {
+		flex-direction: column;
+	}
+
+	.sort {
+		@include media("<phone") {
+			margin-top: 20px;
+		}
+
+		form {
+			display: flex;
+			align-items: center;
+
+			span {
+				margin-right: 25px;
+				font-size: 18px;
+			}
+		}
+	}
+}

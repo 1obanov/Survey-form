@@ -1,0 +1,80 @@
+@import "vendors/include-media";
+@import "base/variables";
+
+:root {
+	// === Base variable
+
+	// --- HTML style
+	--rem-base: 10px;
+	// --- Body style
+	--font-size-base: 16px;
+	--line-height-base: 1.2;
+	--vertical-rhythm: calc(var(--line-height-base) * 1em);
+	// --- Animation
+	--animation-duration: 0.3s;
+	--animation-timing-function: ease;
+	// Gutter
+	--gutter: #{$gutter};
+	// Grid
+	--grid-gutter: #{map-get($grid, 'gutter')};
+
+	// --- Css variable for h1-h6 font-size
+	@each $name,
+	$array in $headings {
+		@if ($name=="default") {
+			@for $i from 1 through length($array) {
+				--h#{$i}: #{nth($array, $i)};
+			}
+		}
+
+		@else {
+			@include media("<=#{$name}") {
+				@for $i from 1 through length($array) {
+					--h#{$i}: #{nth($array, $i)};
+				}
+			}
+		}
+	}
+
+	// --- Css variable for buttons size
+	@each $name,
+	$array in $btnsSize {
+		@if ($name=="default") {
+
+			@each $key,
+			$arr in $array {
+
+				@each $prop,
+				$value in $arr {
+					@if ($key=="default") {
+						--btn-#{$prop}: #{$value};
+					}
+
+					@else {
+						--btn-#{$key}-#{$prop}: #{$value};
+					}
+				}
+			}
+		}
+
+		@else {
+			@include media("<=#{$name}") {
+
+				@each $key,
+				$arr in $array {
+
+					@each $prop,
+					$value in $arr {
+						@if ($key=="default") {
+							--btn-#{$prop}: #{$value};
+						}
+
+						@else {
+							--btn-#{$key}-#{$prop}: #{$value};
+						}
+					}
+				}
+			}
+		}
+	}
+}
